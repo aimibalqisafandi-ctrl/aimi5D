@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" a href="style(edu).css">
+	<title>
+		Index style 2
+	</title>
+</head>
+<body>
+<!--- header---> 
+<h1> AIMI'S PERSONAL WEBSITE</h1>
+<nav>
+		<a href="index.html">Home</a>
+		<a href="Aboutme.html">Aboutme</a>
+		<a href="Family.html">Family</a>
+		<a href="Experience.html">Experience</a>
+		<a href="Friends.html">Friends</a>
+		<a href="Education.html">Education</a>
+		<a href="Gallery.html">Gallery</a>
+		<a href="Favourites.html">Favourites</a>
+		<a href="Hobby.html">Hobby</a>	
+</nav>
+
+<!--- website content --->
+<div class="content">
+		<h2> Starting curious in kindergarten, exploring in primary school, overcoming challenges in secondary, and dreaming big at university – learning never stops</h2>
+         <div class="timeline">
+    <div class="timeline-entry left">
+        <img src="edu t.jpg" >
+        <h3>Tadika Kemas Annur</h3>
+        <p>2008 - 2011</p>
+    </div>
+    <div class="timeline-entry right">
+        <img src="sktk.jpeg" >
+        <h3>Sekolah Kebangsaan Teluk Ketapang</h3>
+        <p>2012 - 2017</p>
+    </div>
+    <div class="timeline-entry left">
+        <img src="sif.jpg" >
+        <h3>Sekolah Menengah Kebangsaan Ibrahim Fikri </h3>
+        <p>2018 - 2022</p>
+    </div>
+     <div class="timeline-entry right">
+        <img src="uitm.jpg" >
+        <h3>Universiti Teknologi Mara Machang Branch, Kelantan</h3>
+        <p>2023 - Present</p>
+    </div>
+  </div>
+		
+</div>
+<script>
+const entries = document.querySelectorAll('.timeline-entry');
+window.addEventListener('scroll', () => {
+    entries.forEach(entry => {
+        const rect = entry.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 100) {
+            entry.classList.add('show');
+        }
+    });
+});
+
+</script>
+<!-- clock-->
+<script>
+function animateFlip(element, newValue) {
+    if (element.textContent !== newValue) {
+        element.classList.remove("flip");
+        void element.offsetWidth; // restart animation
+        element.classList.add("flip");
+        element.textContent = newValue;
+    }
+}
+function updateClock() {
+    const now = new Date();
+
+    let hour = String(now.getHours()).padStart(2, '0');
+    let minute = String(now.getMinutes()).padStart(2, '0');
+    let second = String(now.getSeconds()).padStart(2, '0');
+
+    animateFlip(document.getElementById("hour"), hour);
+    animateFlip(document.getElementById("minute"), minute);
+    animateFlip(document.getElementById("second"), second);
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+let ampm = now.getHours() >= 12 ? "PM" : "AM";
+animateFlip(document.getElementById("ampm"), ampm);
+function updateClock() {
+    const now = new Date();
+
+    let hour = String(now.getHours()).padStart(2, '0');
+    let minute = String(now.getMinutes()).padStart(2, '0');
+    let second = String(now.getSeconds()).padStart(2, '0');
+    let ampm = now.getHours() >= 12 ? "PM" : "AM";
+
+    animateFlip(document.getElementById("hour"), hour);
+    animateFlip(document.getElementById("minute"), minute);
+    animateFlip(document.getElementById("second"), second);
+    animateFlip(document.getElementById("ampm"), ampm);
+}
+</script>
+<div class="flip-clock-container">
+    <div class="flip-unit">
+        <div id="hour" class="flip-box">00H</div>
+    </div>
+
+    <div class="flip-unit">
+        <div id="minute" class="flip-box">00M</div>
+    </div>
+
+    <div class="flip-unit">
+        <div id="second" class="flip-box">00S</div>
+    </div>
+
+	<div class="flip-unit">
+    <div id="ampm" class="flip-box">AM</div>
+</div>
+
+<!---copyright---> 
+	<footer class="footer">
+		<p>&copy; 2025 Designed for educational purpose|Aimi Balqis Afandi</p>
+	</footer>
+<!-- audio-->
+<audio controls autoplay>
+  <source src="lagu edu.mp3" type="audio/mpeg">
+
+</audio>
+</body>
+</html>

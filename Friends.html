@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style(gall).css">
+    <title>Index style 2</title>
+</head>
+<body>
+<!---header---> 
+<h1>AIMI'S PERSONAL WEBSITE</h1>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="Aboutme.html">Aboutme</a>
+    <a href="Family.html">Family</a>
+    <a href="Experience.html">Experience</a>
+    <a href="Friends.html">Friends</a>
+    <a href="Education.html">Education</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="Favourites.html">Favourites</a>
+    <a href="Hobby.html">Hobby</a>  
+</nav>
+
+<div class="content">
+
+    <!-- PARTITION 1 -->
+<div class="gallery-section">
+
+    <div class="gallery-container">
+    <div class="gallery-item"><img src="frnds1.jpg"></div>
+    <div class="gallery-item"><img src="frnds2.jpg"></div>
+    <div class="gallery-item"><img src="frnds6.jpg"></div>
+    </div>
+
+    <div class="gallery-caption">aisha</div>
+</div>
+
+ <!-- PARTITION 2 -->
+<div class="gallery-section">
+
+    <div class="gallery-container">
+    <div class="gallery-item"><img src="frnds4.jpg"></div>
+    <div class="gallery-item"><img src="frnds3.jpg"></div>
+    <div class="gallery-item"><img src="frnds5.jpg"></div>
+    </div>
+
+    <div class="gallery-caption">darwish</div>
+</div>
+<!-- PARTITION 3 -->
+<div class="gallery-section">
+
+    <div class="gallery-container">
+    <div class="gallery-item"><img src="frnds7.jpg"></div>
+    <div class="gallery-item"><img src="frnds8.jpg"></div>
+    <div class="gallery-item"><img src="frnds9.jpg"></div>
+    </div>
+</div>
+
+    <div class="gallery-caption">mydin-a</div>
+
+<!-- PARTITION 4 -->
+<div class="gallery-section">
+
+    <div class="gallery-container">
+    <div class="gallery-item"><img src="frnds10.jpg"></div>
+    <div class="gallery-item"><img src="frnds14.jpg"></div>
+    <div class="gallery-item"><img src="frnds15.jpg"></div>
+    </div>
+
+    <div class="gallery-caption">yayaho</div>
+</div>
+<!-- PARTITION 5 -->
+<div class="gallery-section">
+
+    <div class="gallery-container">
+    <div class="gallery-item"><img src="frnds16.jpg"></div>
+    <div class="gallery-item"><img src="frnds17.jpg"></div>
+    <div class="gallery-item"><img src="frnds18.jpg"></div>
+    </div>
+
+    <div class="gallery-caption">dani</div>
+</div>
+
+</div>
+
+</div>
+<!-- SCRIPT clock -->
+<script>
+function animateFlip(element, newValue) {
+    if (element.textContent !== newValue) {
+        element.classList.remove("flip");
+        void element.offsetWidth;
+        element.classList.add("flip");
+        element.textContent = newValue;
+    }
+}
+
+function updateClock() {
+    const now = new Date();
+
+    let hour = String(now.getHours()).padStart(2, '0');
+    let minute = String(now.getMinutes()).padStart(2, '0');
+    let second = String(now.getSeconds()).padStart(2, '0');
+    let ampm = now.getHours() >= 12 ? "PM" : "AM";
+
+    animateFlip(document.getElementById("hour"), hour);
+    animateFlip(document.getElementById("minute"), minute);
+    animateFlip(document.getElementById("second"), second);
+    animateFlip(document.getElementById("ampm"), ampm);
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+<!-- clock-->
+<div class="flip-clock-container">
+
+    <div class="flip-unit">
+        <div id="hour" class="flip-box">00H</div>
+    </div>
+
+    <div class="flip-unit">
+        <div id="minute" class="flip-box">00M</div>
+    </div>
+
+    <div class="flip-unit">
+        <div id="second" class="flip-box">00S</div>
+    </div>
+
+    <div class="flip-unit">
+        <div id="ampm" class="flip-box">AM</div>
+    </div>
+
+</div>
+
+
+<!---copy right--->
+<footer class="footer">
+    <p>&copy; 2025 Designed for educational purpose | Aimi Balqis Afandi</p>
+</footer>
+<!-- audio-->
+<audio controls autoplay>
+  <source src="friends.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>

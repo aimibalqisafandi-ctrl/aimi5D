@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" a href="style(fav).css">
+	<title>
+		Index style 2
+	</title>
+</head>
+<body>
+<h1> AIMI'S PERSONAL WEBSITE</h1>
+<nav>
+		<a href="index.html">Home</a>
+		<a href="Aboutme.html">Aboutme</a>
+		<a href="Family.html">Family</a>
+		<a href="Experience.html">Experience</a>
+		<a href="Friends.html">Friends</a>
+		<a href="Education.html">Education</a>
+		<a href="Gallery.html">Gallery</a>
+		<a href="Favourites.html">Favourites</a>
+		<a href="Hobby.html">Hobby</a>	
+</nav>
+<!--- website content--->
+<!-- hirono pictures--> 
+      <div class="banner">
+        <div class="banner-track">
+          <img src="h1.png" alt="a">
+          <img src="h2.png" alt="b">
+          <img src="h3.png" alt="c">
+          <img src="h4.png" alt="d">
+          <img src="h5.png" alt="e">
+          <img src="h6.png" alt="f">
+          <img src="h7.png" alt="g">
+          <img src="h8.png" alt="h">
+          <img src="h9.png" alt="i">
+          <img src="h1.png" alt="a">
+          <img src="h2.png" alt="b">
+          <img src="h3.png" alt="c">
+          <img src="h4.png" alt="d">
+          <img src="h5.png" alt="e">
+          <img src="h6.png" alt="f">
+          <img src="h7.png" alt="g">
+          <img src="h8.png" alt="h">
+          <img src="h9.png" alt="i">
+        </div>
+      </div>
+
+<div class="content">
+    <h2> always going back to my favorites</h2>
+<div class="slider-container">
+    <div class="arrow left" onclick="prevSlide()">&#10094;</div>
+    <div class="slider-content">
+        <img id="favImage" src="fav main.jpg" alt="">
+        <p id="favTitle">“I have a lot of favourites, but these are the only ones I’ll share… because at least they make sense</p>
+    </div>
+    <div class="arrow right" onclick="nextSlide()">&#10095;</div>
+</div>
+<script>
+let index = 0;
+
+const images = [
+    { src: "fav1.jpg", title: "Favourite Place:The beach helps me de-stress, maybe it’s the sound of the ocean, maybe it’s the person I ‘coincidentally’ meet there "  },
+    { src: "fav2.jpg", title: "Favourite Food:I love sushi.. the only thing I’m willing to spend money on even when I swear I’m broke." },
+    { src: "fav3.jpg", title: "Favourite Dessert:When I say I want ice cream, just know I’m either stressed, sad, or about to cry — it’s my survival kit." },
+    { src: "fav4.jpg", title: "Favourite Drink:Matcha keeps me alive. Chocolate keeps me emotionally stable." },
+     { src:"fav5.jpg", title: "Favourite Colour:I don’t love pink… but it’s the only colour that pretends to make me approachable." },
+    { src: "fav6.jpg", title: "Favourite Animal:Leona was my reason to love cats. Since she passed, I like them… but my heart’s retired." },
+    { src: "fav7.jpg", title: "Favourite Song:is my jam — I can’t explain it, even to myself" },
+    { src: "fav8.jpg", title: "Favourite Activity:I bake to heal my inner child… and occasionally to eat my feelings" },
+];
+  
+function showSlide(i) {
+    document.getElementById("favImage").src = images[i].src;
+    document.getElementById("favTitle").innerText = images[i].title;
+}
+
+function prevSlide() {
+    index = (index - 1 + images.length) % images.length;
+    showSlide(index);
+}
+
+function nextSlide() {
+    index = (index + 1) % images.length;
+    showSlide(index);
+}
+</script>
+</div>
+
+<!-- clock-->
+<script>
+function animateFlip(element, newValue) {
+    if (element.textContent !== newValue) {
+        element.classList.remove("flip");
+        void element.offsetWidth; // restart animation
+        element.classList.add("flip");
+        element.textContent = newValue;
+    }
+}
+function updateClock() {
+    const now = new Date();
+
+    let hour = String(now.getHours()).padStart(2, '0');
+    let minute = String(now.getMinutes()).padStart(2, '0');
+    let second = String(now.getSeconds()).padStart(2, '0');
+
+    animateFlip(document.getElementById("hour"), hour);
+    animateFlip(document.getElementById("minute"), minute);
+    animateFlip(document.getElementById("second"), second);
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+let ampm = now.getHours() >= 12 ? "PM" : "AM";
+animateFlip(document.getElementById("ampm"), ampm);
+function updateClock() {
+    const now = new Date();
+
+    let hour = String(now.getHours()).padStart(2, '0');
+    let minute = String(now.getMinutes()).padStart(2, '0');
+    let second = String(now.getSeconds()).padStart(2, '0');
+    let ampm = now.getHours() >= 12 ? "PM" : "AM";
+
+    animateFlip(document.getElementById("hour"), hour);
+    animateFlip(document.getElementById("minute"), minute);
+    animateFlip(document.getElementById("second"), second);
+    animateFlip(document.getElementById("ampm"), ampm);
+}
+</script>
+<div class="flip-clock-container">
+    <div class="flip-unit">
+        <div id="hour" class="flip-box">00H</div>
+    </div>
+
+    <div class="flip-unit">
+        <div id="minute" class="flip-box">00M</div>
+    </div>
+
+    <div class="flip-unit">
+        <div id="second" class="flip-box">00S</div>
+    </div>
+
+	<div class="flip-unit">
+    <div id="ampm" class="flip-box">AM</div>
+</div>
+<!---copy right--->
+	<footer class="footer">
+		<p>&copy; 2025 Designed for educational purpose|Aimi Balqis Afandi</p>
+	</footer>
+<!-- audio-->
+<audio controls autoplay>
+  <source src="fav1.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>

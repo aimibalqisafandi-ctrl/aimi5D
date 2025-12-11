@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" a href="style.css">
+	<title>
+		Index style 2
+	</title>
+</head>
+<body>
+<!-- name popup insert-->
+<div id="namePopup">
+    <div class="popup-box">
+        <h2>Enter Your Name</h2>
+        <input type="text" id="userName" placeholder="Your Name">
+        <button onclick="submitName()">Submit</button>
+    </div>
+</div>
+
+<!-- landing page -->
+<div id="landing">
+    <h1>Oh hey! You found me ≽^• ˕ •^≼</h1>
+    <button onclick="enterSite()">press me!</button>
+</div>
+
+<!-- welcome text-->
+<div id="welcomeContainer" style="overflow:hidden; width:100%; text-align:center; margin-top:20px;">
+    <h2 id="welcomeText" style="display:inline-block; color:#6B4423;"></h2>
+</div>
+
+<!-- HEADER -->
+<h1> AIMI'S PERSONAL WEBSITE</h1>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="Aboutme.html">Aboutme</a>
+    <a href="Family.html">Family</a>
+    <a href="Experience.html">Experience</a>
+    <a href="Friends.html">Friends</a>
+    <a href="Education.html">Education</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="Favourites.html">Favourites</a>
+    <a href="Hobby.html">Hobby</a> 
+</nav>
+
+<!--- website content --->
+<main>
+<!--- gambarku--->
+    <div class="hero-section">
+    <img src="gambarku.jpg">
+    <div class="hero-text">
+
+<!--- text beside the picture--->
+      <p style="font-size:100px";><span class="special-font">WELCOME!</span> </p>
+      <p>Hey!! you’re officially inside my personal little world on the web. This is where I talk about me, my family, my experience, my friends, education, gallery, favourites also my hobby! Feel free to look around!</p>
+
+      <p>In case you’re wondering... I built this website for IMD318 subject's requirement.</p>
+
+      <p>You will get to know about my information here!</p>
+    </div>
+    </div>
+</main>
+
+<!-- clock-->
+<script>
+function animateFlip(element, newValue) {
+    if (element.textContent !== newValue) {
+        element.classList.remove("flip");
+        void element.offsetWidth; // restart animation
+        element.classList.add("flip");
+        element.textContent = newValue;
+    }
+}
+function updateClock() {
+    const now = new Date();
+
+    let hour = String(now.getHours()).padStart(2, '0');
+    let minute = String(now.getMinutes()).padStart(2, '0');
+    let second = String(now.getSeconds()).padStart(2, '0');
+
+    animateFlip(document.getElementById("hour"), hour);
+    animateFlip(document.getElementById("minute"), minute);
+    animateFlip(document.getElementById("second"), second);
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+let ampm = now.getHours() >= 12 ? "PM" : "AM";
+animateFlip(document.getElementById("ampm"), ampm);
+function updateClock() {
+    const now = new Date();
+
+    let hour = String(now.getHours()).padStart(2, '0');
+    let minute = String(now.getMinutes()).padStart(2, '0');
+    let second = String(now.getSeconds()).padStart(2, '0');
+    let ampm = now.getHours() >= 12 ? "PM" : "AM";
+
+    animateFlip(document.getElementById("hour"), hour);
+    animateFlip(document.getElementById("minute"), minute);
+    animateFlip(document.getElementById("second"), second);
+    animateFlip(document.getElementById("ampm"), ampm);
+}
+</script>
+
+<!--- flip clock--->
+<div class="flip-clock-container">
+    <div class="flip-unit">
+        <div id="hour" class="flip-box">00H</div>
+    </div>
+
+    <div class="flip-unit">
+        <div id="minute" class="flip-box">00M</div>
+    </div>
+
+    <div class="flip-unit">
+        <div id="second" class="flip-box">00S</div>
+    </div>
+
+	<div class="flip-unit">
+    <div id="ampm" class="flip-box">AM</div>
+</div>
+
+<!---copy right--->
+	<footer class="footer">
+		<p>&copy; 2025 Designed for educational purpose|Aimi Balqis Afandi</p>
+	</footer>
+
+<!-- script pop up name -->
+<script>
+window.onload = function() {
+    document.getElementById("namePopup").style.display = "flex";
+}
+
+function submitName() {
+    let name = document.getElementById("userName").value.trim();
+
+    if (name === "") {
+        alert("Please enter your name!");
+        return;
+    }
+
+    let welcome = document.getElementById("welcomeText");
+    welcome.textContent = "Welcome " + name + "! Let's dig in!";
+
+    // Tambah class untuk animasi
+    welcome.classList.add("moving-text");
+
+    // Tutup popup
+    document.getElementById("namePopup").style.display = "none";
+}
+
+function enterSite() {
+    document.getElementById('landing').style.display = 'none';
+}
+</script>
+</body>
+</html>

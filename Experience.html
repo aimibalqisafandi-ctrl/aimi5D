@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" a href="style(exp).css">
+	<title>
+		Index style 2
+	</title>
+</head>
+<body>
+<!--- header---> 
+<h1> AIMI'S PERSONAL WEBSITE</h1>
+<nav>
+		<a href="index.html">Home</a>
+		<a href="Aboutme.html">Aboutme</a>
+		<a href="Family.html">Family</a>
+		<a href="Experience.html">Experience</a>
+		<a href="Friends.html">Friends</a>
+		<a href="Education.html">Education</a>
+		<a href="Gallery.html">Gallery</a>
+		<a href="Favourites.html">Favourites</a>
+		<a href="Hobby.html">Hobby</a>	
+</nav>
+
+<div class="content">
+<!-- card section -->
+<div class="experience-section">
+    <div class="exp-card">
+        <img src="ex1.jpeg">
+        <div class="exp-text">
+            <h3>Boost – KTCC Mall</h3>
+            <p>Part-time staff = Customer service, cashier, and drink preparation. <br> • I only worked for one day and didn’t show up the next hehe. It was my very first job in F&B after finishing SPM</p>
+        </div>
+    </div>
+
+    <div class="exp-card">
+        <img src="ex2.jpg">
+        <div class="exp-text">
+            <h3>NOSJA Studio – Jalan Anpas</h3>
+            <p>•This is my second F&B job. I worked here for 2 months, often being the only staff, and sometimes my boss would leave me alone, making it feel like the shop was all mine. Working here was fun, but a bit scary since I sometimes got home at 1 a.m.</p>
+        </div>
+    </div>
+
+    <div class="exp-card">
+        <img src="ex3.jpg">
+        <div class="exp-text">
+            <h3>Gamelan Dancer</h3>
+            <p>•I was a gamelan dancer from when I was 11 until 13. <br> I even performed for VIPs at various events. <br> It was sad that I couldn’t continue dancing as I got older because my dad didn’t allow it, but the experience is something I’ll never forget. <br>  The best part was the daily training, getting all dressed up and made up for performances,<br> and of course, earning some money and enjoying the food afterwards!</p>
+        </div>
+    </div>
+
+    <div class="exp-card">
+        <img src="ex4.jpg">
+        <div class="exp-text">
+            <h3>Internship at Unisza Library</h3>
+            <p>•My internship was at the end of semester 4, and it was really great.<br> I gained a lot of experience, and internship here also made me enjoy library-related subjects more. <br>before this, I only liked record management subject but not for now. I hope I can continue in this field and get a good job in the future!</p>
+        </div>
+    </div>
+   <div class="exp-card">
+        <img src="ex5.jpg">
+        <div class="exp-text">
+            <h3>Netballer</h3>
+            <p>•I played netball starting when I was 5, then stopped at 12 after representing my school.<br> I picked it up again at 15 for school competitions, then played again at 16–17,<br>  and finally stopped.I really enjoyed playing netball, but I always felt a bit insecure because some of my friends were better than me huhu.</p>
+        </div>
+    </div>
+    <div class="exp-card">
+        <img src="ex6.jpg">
+        <div class="exp-text">
+            <h3>Batik Cake and Cheesekut Seller at School</h3>
+            <p>•My sister and I made batik cakes and cheesecakes, then sold them at school to my friends. It was fun to make, but not many people bought them,<br> and I eventually stopped because I was too lazy to keep making them</p>
+        </div>
+    </div>
+    <div class="exp-card">
+        <img src="ex7.jpg">
+        <div class="exp-text">
+            <h3>Dropship</h3>
+            <p>•I did a cookie dropshipping business. <br>It was fun because  I got to sell cookies and also get some for free! <br>The only downside was I had to spend money to buy stock,<br> and I barely made any profit only about RM5 for me . But hey, I even got ‘Top Dropship’ because my cookies sold fast!</p>
+        </div>
+    </div>
+    <div class="exp-card">
+        <img src="ex8.jpg">
+        <div class="exp-text">
+            <h3>Hiking</h3>
+            <p>•This was my first time hiking with friends. <br>I never went before because I was scared of getting lost or… <br>kidnapped by ‘bunian’ . Hiking was actually fun and felt healthy, though I had to wake up super early to catch the sunset!</p>
+        </div>
+    </div>
+    <div class="exp-card">
+        <img src="ex9.jpg">
+        <div class="exp-text">
+            <h3>Grab Student Driver</h3>
+            <p>•I did Grab deliveries for UiTM Machang students. I started in semester 3, <br> in just one month, I earned almost RM1,000! After semesters 4 and 5, it slowed down because I was lazy, so I only did Grab whenever I felt like it.</p>
+        </div>
+    </div>
+</div>
+</div><!--
+
+<!-- clock-->
+<script>
+function animateFlip(element, newValue) {
+    if (element.textContent !== newValue) {
+        element.classList.remove("flip");
+        void element.offsetWidth; // restart animation
+        element.classList.add("flip");
+        element.textContent = newValue;
+    }
+}
+function updateClock() {
+    const now = new Date();
+
+    let hour = String(now.getHours()).padStart(2, '0');
+    let minute = String(now.getMinutes()).padStart(2, '0');
+    let second = String(now.getSeconds()).padStart(2, '0');
+
+    animateFlip(document.getElementById("hour"), hour);
+    animateFlip(document.getElementById("minute"), minute);
+    animateFlip(document.getElementById("second"), second);
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+let ampm = now.getHours() >= 12 ? "PM" : "AM";
+animateFlip(document.getElementById("ampm"), ampm);
+function updateClock() {
+    const now = new Date();
+
+    let hour = String(now.getHours()).padStart(2, '0');
+    let minute = String(now.getMinutes()).padStart(2, '0');
+    let second = String(now.getSeconds()).padStart(2, '0');
+    let ampm = now.getHours() >= 12 ? "PM" : "AM";
+
+    animateFlip(document.getElementById("hour"), hour);
+    animateFlip(document.getElementById("minute"), minute);
+    animateFlip(document.getElementById("second"), second);
+    animateFlip(document.getElementById("ampm"), ampm);
+}
+</script>
+<div class="flip-clock-container">
+    <div class="flip-unit">
+        <div id="hour" class="flip-box">00H</div>
+    </div>
+
+    <div class="flip-unit">
+        <div id="minute" class="flip-box">00M</div>
+    </div>
+
+    <div class="flip-unit">
+        <div id="second" class="flip-box">00S</div>
+    </div>
+
+	<div class="flip-unit">
+    <div id="ampm" class="flip-box">AM</div>
+</div>
+
+<!---copy right--->
+	<footer class="footer">
+		<p>&copy; 2025 Designed for educational purpose|Aimi Balqis Afandi</p>
+	</footer>
+</body>
+</html>

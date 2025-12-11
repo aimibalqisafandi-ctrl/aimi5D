@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" a href="style(hby).css">
+	<title>
+		Index style 2
+	</title>
+</head>
+<body>
+<h1> AIMI'S PERSONAL WEBSITE</h1>
+<nav>
+		<a href="index.html">Home</a>
+		<a href="Aboutme.html">Aboutme</a>
+		<a href="Family.html">Family</a>
+		<a href="Experience.html">Experience</a>
+		<a href="Friends.html">Friends</a>
+		<a href="Education.html">Education</a>
+		<a href="Gallery.html">Gallery</a>
+		<a href="Favourites.html">Favourites</a>
+		<a href="Hobby.html">Hobby</a>	
+</nav>
+
+<!--- website content --->
+<div class="content">
+		<h2> i collect hobbies like i collect stress</h2>
+		<div class="fav-img-container">
+
+  <div class="fav-img-card">
+    <img src="hobi1.jpg">
+    <div class="fav-overlay">
+      <h3>watching K-Drama</h3>
+      <p>i love watching kdrama especially when i have assignment due <br> and change it every first eps i watched</p>
+    </div>
+  </div>
+
+  <div class="fav-img-card">
+    <img src="hobi2.jpg">
+    <div class="fav-overlay">
+      <h3>i likes to read book when i'm free</h3>
+      <p>Buy books like a pro, read them… someday maybe</p>
+    </div>
+  </div>
+
+  <div class="fav-img-card">
+    <img src="hobi3.jpg">
+    <div class="fav-overlay">
+      <h3>i love playing blockblast</h3>
+      <p>Started to chill… ended up yelling</p>
+    </div>
+  </div>
+<div class="fav-img-card">
+    <img src="hobi4.jpg">
+    <div class="fav-overlay">
+      <h3>shopping</h3>
+      <p>Online shopping: cheaper than therapy, pricier than my bank</p>
+    </div>
+  </div>
+
+  <div class="fav-img-card">
+    <img src="hobi5.jpg">
+    <div class="fav-overlay">
+      <h3>current obsession:briskwalk</h3>
+      <p>my way of pretending to exercise</p>
+    </div>
+  </div>
+
+  <div class="fav-img-card">
+    <img src="hobi6.jpg">
+    <div class="fav-overlay">
+      <h3>listening podcast</h3>
+      <p>any kind of podcast:kawe dengar</p>
+    </div>
+  </div>
+  <div class="fav-img-card">
+    <img src="hobi7.jpg">
+    <div class="fav-overlay">
+      <h3>capture sunset part of my hobby i guess...</h3>
+      <p>Watching the sun go down while pretending I have my life together."</p>
+    </div>
+  </div><div class="fav-img-card">
+    <img src="hobi8.jpg">
+    <div class="fav-overlay">
+      <h3>i love driving during my free time </h3>
+      <p>I drive to heal… and to avoid humans</p>
+    </div>
+  </div><div class="fav-img-card">
+    <img src="hobi9.jpg">
+    <div class="fav-overlay">
+      <h3>masjid hunting!</h3>
+      <p>Found a beautiful mosque… took <br>photos first, prayed later</p>
+    </div>
+  </div><div class="fav-img-card">
+    <img src="hobi10.jpg">
+    <div class="fav-overlay">
+      <h3>sightseeing</h3>
+      <p>Exploring like a tourist, even if I live here</p>
+    </div>
+  </div>
+</div>
+</div>
+<!-- clock-->
+<script>
+function animateFlip(element, newValue) {
+    if (element.textContent !== newValue) {
+        element.classList.remove("flip");
+        void element.offsetWidth; // restart animation
+        element.classList.add("flip");
+        element.textContent = newValue;
+    }
+}
+function updateClock() {
+    const now = new Date();
+
+    let hour = String(now.getHours()).padStart(2, '0');
+    let minute = String(now.getMinutes()).padStart(2, '0');
+    let second = String(now.getSeconds()).padStart(2, '0');
+
+    animateFlip(document.getElementById("hour"), hour);
+    animateFlip(document.getElementById("minute"), minute);
+    animateFlip(document.getElementById("second"), second);
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+let ampm = now.getHours() >= 12 ? "PM" : "AM";
+animateFlip(document.getElementById("ampm"), ampm);
+function updateClock() {
+    const now = new Date();
+
+    let hour = String(now.getHours()).padStart(2, '0');
+    let minute = String(now.getMinutes()).padStart(2, '0');
+    let second = String(now.getSeconds()).padStart(2, '0');
+    let ampm = now.getHours() >= 12 ? "PM" : "AM";
+
+    animateFlip(document.getElementById("hour"), hour);
+    animateFlip(document.getElementById("minute"), minute);
+    animateFlip(document.getElementById("second"), second);
+    animateFlip(document.getElementById("ampm"), ampm);
+}
+</script>
+<div class="flip-clock-container">
+    <div class="flip-unit">
+        <div id="hour" class="flip-box">00H</div>
+    </div>
+
+    <div class="flip-unit">
+        <div id="minute" class="flip-box">00M</div>
+    </div>
+
+    <div class="flip-unit">
+        <div id="second" class="flip-box">00S</div>
+    </div>
+
+	<div class="flip-unit">
+    <div id="ampm" class="flip-box">AM</div>
+</div>
+<!---copy right--->
+	<footer class="footer">
+		<p>&copy; 2025 Designed for educational purpose|Aimi Balqis Afandi</p>
+	</footer>
+<!-- audio-->
+<audio controls autoplay>
+  <source src="hobby1.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
